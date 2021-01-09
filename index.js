@@ -13,7 +13,7 @@ module.exports.io = require('socket.io')(server);
 
 require('./sockets/socket');
 
-//Publico
+//Publico en casa 
 
 const publicPath = path.resolve( __dirname, 'public');
 app.use( express.static(publicPath));
