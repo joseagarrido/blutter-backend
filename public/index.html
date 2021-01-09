@@ -18,11 +18,21 @@
             console.log('desconectado del server')
         });
 
-        socket.emit('mensaje', {nombre:'Jose'});
+        //socket.emit('mensaje', {nombre:'Jose'});
 
-        socket.on('mensaje', function(payload){
-            console.log('excuchando ', payload);
+        /*socket.on('mensaje', function(payload){
+            console.log('escuchando ', payload);
+        });*/
+
+        socket.on('bandas-activas', function(payload){
+            console.clear();
+            console.table(payload);
+        });
+
+        socket.on('votarBanda', function(payload){
+            console.log('escuchando ', payload);
         })
+
     </script> 
     
 </body>
